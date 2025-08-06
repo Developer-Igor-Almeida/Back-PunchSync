@@ -1,0 +1,6 @@
+@PunchSync.Api_HostAddress = http://localhost:5238
+
+GET {{PunchSync.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

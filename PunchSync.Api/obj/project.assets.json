@@ -1,0 +1,236 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Microsoft.AspNetCore.OpenApi/9.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.OpenApi/1.6.17": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "PunchSync.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PunchSync.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PunchSync.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PunchSync.Application.dll": {}
+        }
+      },
+      "PunchSync.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/PunchSync.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PunchSync.Domain.dll": {}
+        }
+      },
+      "PunchSync.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PunchSync.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PunchSync.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PunchSync.Infra.dll": {}
+        }
+      },
+      "PunchSync.Ioc/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PunchSync.Application": "1.0.0",
+          "PunchSync.Domain": "1.0.0",
+          "PunchSync.Infra": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PunchSync.Ioc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PunchSync.Ioc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AspNetCore.OpenApi/9.0.7": {
+      "sha512": "8aG0mkgmA38IDJ0ca5HIpdexKjHXIh0z1kIdw5WyM6CrD4+CEt97UgSwBBBCHG6QQKV0hj2mfkwtEcqrJBcu8g==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/9.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.6.17": {
+      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.17.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
+    "PunchSync.Application/1.0.0": {
+      "type": "project",
+      "path": "../PunchSync.Application/PunchSync.Application.csproj",
+      "msbuildProject": "../PunchSync.Application/PunchSync.Application.csproj"
+    },
+    "PunchSync.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PunchSync.Domain/PunchSync.Domain.csproj",
+      "msbuildProject": "../PunchSync.Domain/PunchSync.Domain.csproj"
+    },
+    "PunchSync.Infra/1.0.0": {
+      "type": "project",
+      "path": "../PunchSync.Infra/PunchSync.Infra.csproj",
+      "msbuildProject": "../PunchSync.Infra/PunchSync.Infra.csproj"
+    },
+    "PunchSync.Ioc/1.0.0": {
+      "type": "project",
+      "path": "../PunchSync.Ioc/PunchSync.Ioc.csproj",
+      "msbuildProject": "../PunchSync.Ioc/PunchSync.Ioc.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Microsoft.AspNetCore.OpenApi >= 9.0.7",
+      "PunchSync.Infra >= 1.0.0",
+      "PunchSync.Ioc >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\IGOR\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Api\\PunchSync.Api.csproj",
+      "projectName": "PunchSync.Api",
+      "projectPath": "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Api\\PunchSync.Api.csproj",
+      "packagesPath": "C:\\Users\\IGOR\\.nuget\\packages\\",
+      "outputPath": "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Api\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\IGOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Infra\\PunchSync.Infra.csproj": {
+              "projectPath": "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Infra\\PunchSync.Infra.csproj"
+            },
+            "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Ioc\\PunchSync.Ioc.csproj": {
+              "projectPath": "C:\\Mobile\\Back\\Back-PunchSync\\PunchSync.Ioc\\PunchSync.Ioc.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[9.0.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
