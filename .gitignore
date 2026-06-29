@@ -1,0 +1,88 @@
+# Claude Code
+.claude/
+.claude-back/
+.claude-settings/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Binaries e arquivos compilados
+*.dll
+*.exe
+*.pdb
+*.bin
+*.cache
+*.vsidx
+*.suo
+*.ilk
+*.map
+*.exp
+*.lib
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.rsp
+*.pgc
+*.pgd
+*.meta
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# dotnet / MSBuild cache
+project.nuget.cache
+*.assets.json
+*.csproj.nuget.*
+*.csproj.nuget.dgspec.json
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.GlobalUsings.g.cs
+*.csproj.AssemblyReference.cache
+*.sourcelink.json
+*.FileListAbsolute.txt
+*.CoreCompileInputs.cache
+rpswa.dswa.cache.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / Environment
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+*.env
+.env
+.env.*
+secrets.json
