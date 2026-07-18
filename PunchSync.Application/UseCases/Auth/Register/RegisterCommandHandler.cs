@@ -11,16 +11,16 @@ namespace PunchSync.Application.UseCases.Auth.Register;
 
 public sealed class RegisterCommandHandler(
     IUserRepository userRepository,
-    IAcademiaRepository academiaRepository,
+    IGymRepository gymRepository,
     IPasswordHasher passwordHasher,
     IJwtService jwtService,
     IUnitOfWork unitOfWork) : IRequestHandler<RegisterCommand, Result<AuthResponse>>
 {
     public async Task<Result<AuthResponse>> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
-        var academia = await academiaRepository.GetByIdAsync(request.TenantId, cancellationToken);
-        if (academia is null)
-            return Result<AuthResponse>.Failure("Academia não encontrada.", "ACADEMIA_NOT_FOUND");
+        var gym = await gymRepository.GetByIdAsync(request.TenantId, cancellationToken);
+        if (gym is null)
+            return Result<AuthResponse>.Failure("Academia não encontrada.", "GYM_NOT_FOUND");
 
         if (await userRepository.EmailExistsAsync(request.Email.Trim().ToLowerInvariant(), cancellationToken))
             return Result<AuthResponse>.Failure("E-mail já cadastrado.", "EMAIL_ALREADY_EXISTS");

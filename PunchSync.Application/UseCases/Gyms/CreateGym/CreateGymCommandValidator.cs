@@ -1,10 +1,10 @@
 using FluentValidation;
 
-namespace PunchSync.Application.UseCases.Academias.CreateAcademia;
+namespace PunchSync.Application.UseCases.Gyms.CreateGym;
 
-public sealed class CreateAcademiaCommandValidator : AbstractValidator<CreateAcademiaCommand>
+public sealed class CreateGymCommandValidator : AbstractValidator<CreateGymCommand>
 {
-    public CreateAcademiaCommandValidator()
+    public CreateGymCommandValidator()
     {
         RuleFor(x => x.Name).NotEmpty().MaximumLength(150);
         RuleFor(x => x.Slug)

@@ -4,7 +4,7 @@ using PunchSync.Domain.Common;
 namespace PunchSync.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public abstract class BaseController : ControllerBase
 {
     protected IActionResult HandleResult<T>(Result<T> result)

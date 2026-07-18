@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PunchSync.Infra.Data.Migrations
+namespace PunchSync.Infra.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -12,7 +12,7 @@ namespace PunchSync.Infra.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "academias",
+                name: "gyms",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
@@ -26,7 +26,7 @@ namespace PunchSync.Infra.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_academias", x => x.Id);
+                    table.PrimaryKey("PK_gyms", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,9 +47,9 @@ namespace PunchSync.Infra.Data.Migrations
                 {
                     table.PrimaryKey("PK_users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_users_academias_TenantId",
+                        name: "FK_users_gyms_TenantId",
                         column: x => x.TenantId,
-                        principalTable: "academias",
+                        principalTable: "gyms",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -78,8 +78,8 @@ namespace PunchSync.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_academias_Slug",
-                table: "academias",
+                name: "IX_gyms_Slug",
+                table: "gyms",
                 column: "Slug",
                 unique: true);
 
@@ -115,7 +115,7 @@ namespace PunchSync.Infra.Data.Migrations
                 name: "users");
 
             migrationBuilder.DropTable(
-                name: "academias");
+                name: "gyms");
         }
     }
 }

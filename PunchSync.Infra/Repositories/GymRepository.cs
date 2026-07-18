@@ -5,8 +5,8 @@ using PunchSync.Infra.Data;
 
 namespace PunchSync.Infra.Repositories;
 
-public class AcademiaRepository(AppDbContext context) : BaseRepository<Academia>(context), IAcademiaRepository
+public class GymRepository(AppDbContext context) : BaseRepository<Gym>(context), IGymRepository
 {
     public async Task<bool> SlugExistsAsync(string slug, CancellationToken cancellationToken = default)
-        => await DbSet.AnyAsync(a => a.Slug == slug, cancellationToken);
+        => await DbSet.AnyAsync(g => g.Slug == slug, cancellationToken);
 }

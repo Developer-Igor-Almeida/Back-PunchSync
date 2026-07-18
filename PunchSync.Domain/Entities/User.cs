@@ -13,7 +13,7 @@ public class User : BaseEntity
     public Guid TenantId { get; private set; }
     public bool IsActive { get; private set; }
 
-    public Academia? Tenant { get; private set; }
+    public Gym? Tenant { get; private set; }
 
     private readonly List<RefreshToken> _refreshTokens = [];
     public IReadOnlyCollection<RefreshToken> RefreshTokens => _refreshTokens.AsReadOnly();

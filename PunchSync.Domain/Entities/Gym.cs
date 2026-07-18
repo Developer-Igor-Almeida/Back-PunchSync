@@ -3,17 +3,17 @@ using PunchSync.Domain.Enums;
 
 namespace PunchSync.Domain.Entities;
 
-public class Academia : BaseEntity
+public class Gym : BaseEntity
 {
     public string Name { get; private set; } = null!;
     public string Slug { get; private set; } = null!;
     public string? LogoUrl { get; private set; }
-    public AcademiaPlan Plan { get; private set; }
+    public GymPlan Plan { get; private set; }
     public bool IsActive { get; private set; }
 
-    private Academia() { }
+    private Gym() { }
 
-    public Academia(string name, string slug, AcademiaPlan plan = AcademiaPlan.Free)
+    public Gym(string name, string slug, GymPlan plan = GymPlan.Free)
     {
         Name = name;
         Slug = slug;
@@ -21,7 +21,7 @@ public class Academia : BaseEntity
         IsActive = true;
     }
 
-    public void UpdatePlan(AcademiaPlan plan)
+    public void UpdatePlan(GymPlan plan)
     {
         Plan = plan;
         SetUpdatedAt();

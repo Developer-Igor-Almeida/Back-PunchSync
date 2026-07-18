@@ -4,6 +4,6 @@ public enum UserRole
 {
     Aluno = 0,
     Instrutor = 1,
-    AcademiaAdmin = 2,
+    GymAdmin = 2,
     PlatformAdmin = 3
 }

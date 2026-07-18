@@ -32,7 +32,7 @@ public static class DependencyInjection
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
         services.AddScoped<IUserRepository, UserRepository>();
-        services.AddScoped<IAcademiaRepository, AcademiaRepository>();
+        services.AddScoped<IGymRepository, GymRepository>();
         services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
         return services;
     }

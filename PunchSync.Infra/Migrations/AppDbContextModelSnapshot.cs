@@ -7,7 +7,7 @@ using PunchSync.Infra.Data;
 
 #nullable disable
 
-namespace PunchSync.Infra.Data.Migrations
+namespace PunchSync.Infra.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace PunchSync.Infra.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.9");
 
-            modelBuilder.Entity("PunchSync.Domain.Entities.Academia", b =>
+            modelBuilder.Entity("PunchSync.Domain.Entities.Gym", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace PunchSync.Infra.Data.Migrations
                     b.HasIndex("Slug")
                         .IsUnique();
 
-                    b.ToTable("academias", (string)null);
+                    b.ToTable("gyms", (string)null);
                 });
 
             modelBuilder.Entity("PunchSync.Domain.Entities.RefreshToken", b =>
@@ -151,7 +151,7 @@ namespace PunchSync.Infra.Data.Migrations
 
             modelBuilder.Entity("PunchSync.Domain.Entities.User", b =>
                 {
-                    b.HasOne("PunchSync.Domain.Entities.Academia", "Tenant")
+                    b.HasOne("PunchSync.Domain.Entities.Gym", "Tenant")
                         .WithMany()
                         .HasForeignKey("TenantId")
                         .OnDelete(DeleteBehavior.Restrict)

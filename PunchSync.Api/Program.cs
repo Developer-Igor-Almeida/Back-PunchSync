@@ -53,8 +53,6 @@ app.UseMiddleware<ExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
-    // Aplica as migrations automaticamente em desenvolvimento, criando o banco
-    // SQLite na primeira execução. Em produção isso seria feito via pipeline/CI.
     using (var scope = app.Services.CreateScope())
     {
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();

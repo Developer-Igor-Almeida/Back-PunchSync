@@ -1,6 +1,6 @@
 namespace PunchSync.Domain.Enums;
 
-public enum AcademiaPlan
+public enum GymPlan
 {
     Free = 0,
     Pro = 1,
